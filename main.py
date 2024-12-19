@@ -69,6 +69,14 @@ while game_on:
             pen.goto(x_coord,y_coord)
             pen.write(f"{user_input}",align = "center",font=('Arial', 12, 'normal'))
 
+    if game_on and state_count == 50:
+        game_on = False
+        win = Turtle()
+        win.penup()
+        win.pensize(2)
+        win.color("black")
+        win.write("YAY! YOU WON",align= "center",font = ('Arial', 25, 'normal'))
+
     if state_count == 50:
         game_on = False
 
